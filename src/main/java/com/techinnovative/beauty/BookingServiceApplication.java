@@ -1,4 +1,4 @@
-package com.techinnovative.booking_service;
+package com.techinnovative.beauty;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
