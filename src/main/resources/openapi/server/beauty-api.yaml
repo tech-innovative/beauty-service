@@ -11,6 +11,8 @@ servers:
 paths:
   /salons:
     get:
+      tags:
+        - Salons
       summary: Retrieve the list of the salons based on the given parameters
       description: >-
         Retrieve the list of the salons based on the given parameters
@@ -72,4 +74,6 @@ components:
           type: string
         contactValue:
           type: string
-
+tags:
+  - name: Salons
+    description: Salons
