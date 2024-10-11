@@ -1,0 +1,75 @@
+openapi: 3.0.3
+info:
+  title: Beauty API
+  description: Beauty API
+  version: 1.0.0
+servers:
+  - url: https://beauty.com/api/v1
+    description: Production
+  - url: http://localhost:8080/api/v1
+    description: Local
+paths:
+  /salons:
+    get:
+      summary: Retrieve the list of the salons based on the given parameters
+      description: >-
+        Retrieve the list of the salons based on the given parameters
+      operationId: findAllSalons
+      parameters:
+        - in: query
+          name: name
+          description: Name of the salon
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: phoneNumber
+          description: Phone number
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: List of salons populated succesfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Salon'
+
+        400:
+          description: Bad request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        500:
+          description: Internal server error
+components:
+  schemas:
+    Salon:
+      type: object
+      properties:
+        id:
+          description: Salon id
+          type: number
+        name:
+          description: Salon name
+          type: string
+        address:
+          description: Salon address
+          type: string
+        contacts:
+          description: Salon contact
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+    Contact:
+      type: object
+      properties:
+        contactType:
+          type: string
+        contactValue:
+          type: string
+

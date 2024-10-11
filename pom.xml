@@ -13,19 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>beauty-service</name>
 	<description>beauty service</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>17</java.version>
 		<openapi-generator-maven-plugin.version>7.9.0</openapi-generator-maven-plugin.version>
@@ -79,7 +67,7 @@
 							<generatorName>spring</generatorName>
 							<library>spring-boot</library>
 							<inputSpec>
-								${project.basedir}/src/main/resources/openapi/server/users-api.yaml
+								${project.basedir}/src/main/resources/openapi/server/beauty-api.yaml
 							</inputSpec>
 							<output>${project.build.directory}/generated-sources</output>
 
@@ -115,8 +103,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
-
 </project>
