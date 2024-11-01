@@ -14,4 +14,9 @@ public class SalonsResource implements SalonsApi {
         // JPA Specifications
         return SalonsApi.super.findAllSalons(name, phoneNumber);
     }
+
+    @Override
+    public ResponseEntity<Salon> createSaloon(Salon salon) {
+        return SalonsApi.super.createSaloon(salon);
+    }
 }
