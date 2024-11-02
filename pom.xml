@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.techinnovative</groupId>
-	<artifactId>beaty-service</artifactId>
+	<artifactId>beaty</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>beauty-service</name>
 	<description>beauty service</description>
